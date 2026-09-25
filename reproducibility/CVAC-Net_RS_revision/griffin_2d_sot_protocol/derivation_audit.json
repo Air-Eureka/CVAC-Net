@@ -1,0 +1,45 @@
+{
+  "train": {
+    "sequence_pairs": 303,
+    "frames_per_view": 22706,
+    "retained_scenes": 73,
+    "candidate_scenes": 82,
+    "selection": {
+      "top_k": 3,
+      "min_frames": 30,
+      "fallback_min_frames": 20,
+      "min_run_ratio": 0.2,
+      "min_visibility": 0.05,
+      "init_min_visibility": 0.5,
+      "min_box_side": 4.0,
+      "targets_per_scene": 0
+    },
+    "seed": 2026,
+    "source_image_hardlinks_verified": 45412
+  },
+  "val": {
+    "sequence_pairs": 67,
+    "frames_per_view": 4863,
+    "retained_scenes": 16,
+    "candidate_scenes": 22,
+    "selection": {
+      "top_k": 3,
+      "min_frames": 30,
+      "fallback_min_frames": 20,
+      "min_run_ratio": 0.2,
+      "min_visibility": 0.05,
+      "init_min_visibility": 0.5,
+      "min_box_side": 4.0,
+      "targets_per_scene": 0
+    },
+    "seed": 2026,
+    "source_image_hardlinks_verified": 9726
+  },
+  "scene_intersection": [],
+  "hard_val_pairs": 26,
+  "source_hashes": {
+    "convert_griffin_sot.py": "e6f20abfdacc0f810c1f1351debbee37635b8c3368ba02a9b29b0280304a341e",
+    "validate_griffin_sot.py": "d575a2b8cf9f5c984f785bb5d14a71418e10ac4e08588a7e3fd59e0f5b29b6d1",
+    "official/data/split_datas/griffin_100scenes_random.json": "24e0ec8c30518b53a2b5be034a840951932e3db13f4df8501ae0164819b627ea"
+  }
+}

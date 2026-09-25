@@ -1,0 +1,26 @@
+{
+  "procedure": "sort 210 canonical names; Python random.Random(seed).shuffle; first 165 train, final 45 test",
+  "train_count": 165,
+  "test_count": 45,
+  "universe_count": 210,
+  "train_membership_sha256": "267fbcacb880779c5ceae2ff98fc1c36d822d5744c2720bc666a24e59a64bcbc",
+  "test_membership_sha256": "d62b578b9865f3ce478508b12d87cdc438e77a02784b385406f29d37323ed8fe",
+  "candidates": {
+    "0": {
+      "train_membership_exact": false,
+      "test_membership_exact": false
+    },
+    "1": {
+      "train_membership_exact": true,
+      "test_membership_exact": true
+    },
+    "42": {
+      "train_membership_exact": false,
+      "test_membership_exact": false
+    }
+  },
+  "unique_matching_seed": [
+    1
+  ],
+  "scope_note": "Canonical reconstruction establishes a portable generator for the released membership. The discovered historical script used unsorted os.listdir input, so the exact lists remain the authoritative split definition."
+}

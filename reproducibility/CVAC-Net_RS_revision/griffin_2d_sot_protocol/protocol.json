@@ -1,0 +1,52 @@
+{
+  "schema": "cvac-derived-griffin-2d-sot-protocol/v1",
+  "source": {
+    "dataset": "Griffin CARLA-AirSim co-simulation",
+    "upstream_split": "data/split_datas/griffin_100scenes_random.json",
+    "upstream_split_sha256": "24e0ec8c30518b53a2b5be034a840951932e3db13f4df8501ae0164819b627ea",
+    "image_size": [1920, 1080]
+  },
+  "views": {
+    "GRIFFIN_V": "vehicle-side front camera; physical ground view",
+    "GRIFFIN_D": "drone-side front camera; physical aerial view"
+  },
+  "projection": {
+    "cuboid_edges": 12,
+    "camera_depth_near_plane": 0.001,
+    "box_format": "continuous xywh axis-aligned enclosure of the clipped amodal cuboid projection",
+    "image_clip": "[0,1919] x [0,1079]",
+    "minimum_box_side_pixels": 4.0
+  },
+  "selection": {
+    "frame_visibility_minimum": 0.05,
+    "initial_visibility_minimum": 0.5,
+    "minimum_frames": 30,
+    "fallback_minimum_frames": 20,
+    "minimum_run_ratio": 0.2,
+    "targets_per_scene": 0,
+    "seed_recorded_but_not_used_by_all-target_selection": 2026,
+    "top_k_recorded_but_not_used_by_all-target_selection": 3
+  },
+  "split": {
+    "training_pairs": 303,
+    "training_scenes": 73,
+    "training_frames_per_view": 22706,
+    "validation_pairs": 67,
+    "validation_scenes": 16,
+    "validation_frames_per_view": 4863,
+    "scene_overlap": []
+  },
+  "difficult26": {
+    "pair_count": 26,
+    "rule": "visibility below 0.60 in at least 10% of frames in either view OR mean projected box area <= 400 pixels^2 in either view",
+    "selection_uses_tracking_scores": false,
+    "requires_second_inference": false
+  },
+  "evaluation": {
+    "ground_truth_after_initialization": false,
+    "success_iou_thresholds": "0:0.05:1",
+    "precision_center_error_pixels": 20,
+    "normalized_precision_threshold": 0.2,
+    "aggregation": "equal sequence mean within each physical view, followed by equal aerial-ground mean"
+  }
+}
